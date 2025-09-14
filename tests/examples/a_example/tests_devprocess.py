@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.a_example.devprocess import multiply_umbers
+from src.examples.a_example.devprocess import multiply_numbers
 
 class Test_Config(unittest.TestCase):
 
