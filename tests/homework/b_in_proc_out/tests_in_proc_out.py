@@ -1,6 +1,6 @@
 import unittest
 
-from src.homework.b_in_proc_out.output.py import multiply_numbers
+from src.homework.b_in_proc_out.output import multiply_numbers
 
 class Test_Config(unittest.TestCase):
 
