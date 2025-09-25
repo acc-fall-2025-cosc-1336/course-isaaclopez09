@@ -1,17 +1,16 @@
-#multiply numbers 
-from output import multiply_numbers
 
-def main():
-    num1 = 7
-    num2 = 7
-    result = multiply_numbers(num1, num2)
-    print(f"The product of {num1} and {num2} is: {result}")
+from output import get_tip_ammount, get_sales_tax
 
-    num1 = 5
-    num2 = 5
-    result = multiply_numbers(num1,num2)
-    print(f"The product of {num1} and {num2} is: {result}")
 
-if __name__ == '__main__':
-    main()
+def reciept_main():
+    meal_ammount = float(input("Enter meal ammount: "))
+    tip_rate = float(input("Enter tip rate: "))
+    sale_tax = get_sales_tax(meal_ammount)
+    tip_ammount = get_tip_ammount(meal_ammount, tip_rate)
 
+    print("Meal Ammount", meal_ammount)
+    print("sales Tax", sale_tax)
+    print("Tip Ammount", tip_ammount)
+    print("Total", meal_ammount + sale_tax + tip_ammount)
+    
+reciept_main()
