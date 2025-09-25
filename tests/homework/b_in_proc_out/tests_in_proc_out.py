@@ -17,4 +17,3 @@ class Test_Config(unittest.TestCase):
         #test that the function get_number returns 2
         self.assertEqual(20, get_tip_ammount(100, .2))
         self.assertEqual(40, get_tip_ammount(200, .2))
-
