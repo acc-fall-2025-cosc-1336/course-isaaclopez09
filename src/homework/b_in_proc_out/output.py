@@ -1,4 +1,4 @@
-tax_rate = .00675
+tax_rate = .0675
 
 
 def get_sales_tax(meal_ammount):
