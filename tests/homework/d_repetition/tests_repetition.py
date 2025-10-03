@@ -10,4 +10,11 @@ class Test_get_factorial(unittest.TestCase):
         self.assertEqual(get_factorial(-1), "Factorial is not defined for negative numbers.")
 
 
+class Test_sum_odd_numbers(unittest.TestCase):
+    def test_sum_odd_numbers(self):
+        self.assertEqual(sum_odd_number(3), 4)
+        self.assertEqual(sum_odd_number(10), 25)
+        
+
+
         
