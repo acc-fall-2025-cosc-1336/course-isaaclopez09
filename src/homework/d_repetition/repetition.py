@@ -13,7 +13,7 @@ def sum_odd_numbers(n):
     total_sum = 0
     current_number = 1
 
-    while current_number <= limit:
+    while current_number <= n:
         if current_number % 2 != 0:  
             total_sum += current_number
         current_number += 1
