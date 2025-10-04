@@ -35,6 +35,6 @@ def main():
         print("Exiting the program.")
 
     else:
-        print("invalid entry, please select 1,2,or 3")
+        print("invalid entry, please select 1,2,or 3 ")
 
 main()
