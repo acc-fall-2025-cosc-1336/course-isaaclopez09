@@ -4,10 +4,7 @@ the file in /tests/homework/d_repetitions
 has the test functions
 '''
 
-from tests.homework.d_repetition.tests_repetition import get_factorial, sum_odd_numbers
+from tests.homework.e_functions import tests_functions
 
-suite = unittest.TestLoader().loadTestsFromModule(get_factorial)
-unittest.TextTestRunner(verbosity=2).run(suite)
-
-suite = unittest.TestLoader().loadTestsFromModule(sum_odd_numbers)
+suite = unittest.TestLoader().loadTestsFromModule(tests_functions)
 unittest.TextTestRunner(verbosity=2).run(suite)
