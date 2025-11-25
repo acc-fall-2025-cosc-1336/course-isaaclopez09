@@ -32,7 +32,7 @@ def main():
                 print("")
             
         elif selection == "2":
-            print("Exiting program...")
+            print("Exiting program")
             break
         else:
             print("Invalid option, try again.")
