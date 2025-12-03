@@ -1,13 +1,21 @@
-def get_lowest_list_value(values):
-    lowest = values[0]
-    for v in values:
-        if v < lowest:
-            lowest = v
-    return lowest
+def get_p_distance(list1, list2):
+    differences = 0
+    length = len(list1)
 
-def get_highest_list_value(values):
-    highest = values[0]
-    for v in values:
-        if v > highest:
-            highest = v
-    return highest
+    for i in range(length):
+        if list1[i] != list2[i]:
+            differences += 1
+
+    p_distance =  differences / length
+    return p_distance
+
+def get_p_distance_matrix(list1):
+    n=len(list1)
+    p_distance_matrix = []
+
+    for i in range(n):
+        row = []
+        for j in range(n):
+            row.append(get_p_distance(list1[i], list1[j]))
+        p_distance_matrix.append(row)
+    return p_distance_matrix
