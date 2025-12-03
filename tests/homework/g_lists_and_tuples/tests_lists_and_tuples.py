@@ -1,13 +1,44 @@
 import unittest
 
-from src.homework.g_lists_and_tuples.lists import get_lowest_list_value, get_highest_list_value
+from src.homework.g_lists_and_tuples.lists import get_p_distance, get_p_distance_matrix
 
-class TestListFunctions(unittest.TestCase):
+class Test_Config(unittest.TestCase):
 
-    def test_get_lowest_list_value(self):
-        values = [8, 10, 1, 50, 20]
-        self.assertEqual(get_lowest_list_value(values), 1)
+    def test_get_p_distance(self):
+        list1 = ['T','T','T','C','C','A','T','T','T','A']
+        list2 = ['G','A','T','T','C','A','T','T','T','C']
+        self.assertEqual(get_p_distance(list1, list2), .4)
 
-    def test_get_highest_list_value(self):
-        values = [8, 10, 1, 50, 20]
-        self.assertEqual(get_highest_list_value(values), 50)
+
+class Test_Config(unittest.TestCase):
+
+    def test_get_p_distance_matrix(self):
+        list1 = [
+        ['T','T','T','C','C','A','T','T','T','A'],
+
+        ['G','A','T','T','C','A','T','T','T','C'],
+
+        ['T','T','T','C','C','A','T','T','T','T'],
+
+        ['G','T','T','C','C','A','T','T','T','A']
+
+        ]
+
+        actual = [
+
+        [0.0, 0.4, 0.1, 0.1],
+
+        [0.4, 0.0, 0.4, 0.3],
+
+        [0.1, 0.4, 0.0, 0.2],
+
+        [0.1, 0.3, 0.2, 0.0]
+
+        ]
+
+        results = get_p_distance_matrix(list1)
+
+        for i in range(len(actual)):
+            for j in range(len(actual[i])):
+                self.assertEqual(results[i][j], actual[i][j])
+
