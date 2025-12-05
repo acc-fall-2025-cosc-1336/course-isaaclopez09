@@ -14,7 +14,7 @@ def main():
                 user_input = input("Enter DNA list or 'done' when finished: ")
                 if user_input =="done":
                     break
-                list1.append(user_input.split())
+                list1.append(list(user_input))
             matrix = get_p_distance_matrix(list1)
             print("P-distance Matrix:")
             for row in matrix:
