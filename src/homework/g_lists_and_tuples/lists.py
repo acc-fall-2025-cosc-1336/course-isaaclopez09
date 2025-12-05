@@ -5,6 +5,7 @@ def get_p_distance(list1, list2):
     for i in range(length):
         if list1[i] != list2[i]:
             differences += 1
+       
 
     p_distance =  differences / length
     return p_distance
